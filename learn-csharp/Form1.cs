@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,12 @@ namespace learn_csharp
             {
                 cbxSaveActiveTab.Checked = false;
             }
+
+            // Load the references web page
+            // ** put any references you want to make visible in this page **
+            string curDir = Directory.GetCurrentDirectory(); 
+            this.webBrowser1.Url = new Uri(String.Format("file:///{0}/docs/reference.html", curDir));
+
         } 
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

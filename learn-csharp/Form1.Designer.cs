@@ -34,9 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabTJ = new System.Windows.Forms.TabPage();
             this.tabBJ = new System.Windows.Forms.TabPage();
-            this.tabExtra = new System.Windows.Forms.TabPage();
+            this.tabReferences = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabMain.SuspendLayout();
             this.tabHome.SuspendLayout();
+            this.tabReferences.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMain
@@ -44,7 +46,7 @@
             this.tabMain.Controls.Add(this.tabHome);
             this.tabMain.Controls.Add(this.tabTJ);
             this.tabMain.Controls.Add(this.tabBJ);
-            this.tabMain.Controls.Add(this.tabExtra);
+            this.tabMain.Controls.Add(this.tabReferences);
             this.tabMain.Location = new System.Drawing.Point(13, 13);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -104,14 +106,25 @@
             this.tabBJ.Text = "BJ Stuff";
             this.tabBJ.UseVisualStyleBackColor = true;
             // 
-            // tabExtra
+            // tabReferences
             // 
-            this.tabExtra.Location = new System.Drawing.Point(4, 22);
-            this.tabExtra.Name = "tabExtra";
-            this.tabExtra.Size = new System.Drawing.Size(980, 628);
-            this.tabExtra.TabIndex = 3;
-            this.tabExtra.Text = "Extra";
-            this.tabExtra.UseVisualStyleBackColor = true;
+            this.tabReferences.Controls.Add(this.webBrowser1);
+            this.tabReferences.Location = new System.Drawing.Point(4, 22);
+            this.tabReferences.Name = "tabReferences";
+            this.tabReferences.Size = new System.Drawing.Size(980, 628);
+            this.tabReferences.TabIndex = 3;
+            this.tabReferences.Text = "References";
+            this.tabReferences.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(980, 628);
+            this.webBrowser1.TabIndex = 1;
+            this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             // 
             // Form1
             // 
@@ -126,6 +139,7 @@
             this.tabMain.ResumeLayout(false);
             this.tabHome.ResumeLayout(false);
             this.tabHome.PerformLayout();
+            this.tabReferences.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -137,8 +151,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabTJ;
         private System.Windows.Forms.TabPage tabBJ;
-        private System.Windows.Forms.TabPage tabExtra;
+        private System.Windows.Forms.TabPage tabReferences;
         private System.Windows.Forms.CheckBox cbxSaveActiveTab;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 
