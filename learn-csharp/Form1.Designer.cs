@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabTJ = new System.Windows.Forms.TabPage();
             this.tabBJ = new System.Windows.Forms.TabPage();
+            this.btnTestWrite = new System.Windows.Forms.Button();
             this.rbBJWithoutInvoke = new System.Windows.Forms.RadioButton();
             this.rbBJWithInvoke = new System.Windows.Forms.RadioButton();
             this.btnBJWriteGUI = new System.Windows.Forms.Button();
@@ -105,6 +106,7 @@
             // 
             // tabBJ
             // 
+            this.tabBJ.Controls.Add(this.btnTestWrite);
             this.tabBJ.Controls.Add(this.rbBJWithoutInvoke);
             this.tabBJ.Controls.Add(this.rbBJWithInvoke);
             this.tabBJ.Controls.Add(this.btnBJWriteGUI);
@@ -116,6 +118,16 @@
             this.tabBJ.TabIndex = 2;
             this.tabBJ.Text = "BJ Stuff";
             this.tabBJ.UseVisualStyleBackColor = true;
+            // 
+            // btnTestWrite
+            // 
+            this.btnTestWrite.Location = new System.Drawing.Point(879, 32);
+            this.btnTestWrite.Name = "btnTestWrite";
+            this.btnTestWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnTestWrite.TabIndex = 18;
+            this.btnTestWrite.Text = "Test write";
+            this.btnTestWrite.UseVisualStyleBackColor = true;
+            this.btnTestWrite.Click += new System.EventHandler(this.btnTestWrite_Click);
             // 
             // rbBJWithoutInvoke
             // 
@@ -165,9 +177,9 @@
             this.lbBJResults.FormattingEnabled = true;
             this.lbBJResults.Location = new System.Drawing.Point(3, 3);
             this.lbBJResults.Name = "lbBJResults";
+            this.lbBJResults.ScrollAlwaysVisible = true;
             this.lbBJResults.Size = new System.Drawing.Size(869, 147);
             this.lbBJResults.TabIndex = 13;
-            this.lbBJResults.Click += new System.EventHandler(this.btnBJClear_Click);
             // 
             // tabReferences
             // 
@@ -224,6 +236,7 @@
         private System.Windows.Forms.Button btnBJWriteGUI;
         private System.Windows.Forms.Button btnBJClear;
         private System.Windows.Forms.ListBox lbBJResults;
+        private System.Windows.Forms.Button btnTestWrite;
     }
 }
 

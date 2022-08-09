@@ -40,6 +40,7 @@ namespace learn_csharp
                         WriteTextSafe(msg);
                     else
                         lbBJResults.Items.Add(msg);
+                    System.Threading.Thread.Sleep(2000);
                 }
             }
             catch (Exception ex)
@@ -54,6 +55,12 @@ namespace learn_csharp
         {
             new Thread(() => DoGUIBackgroundWrite(rbBJWithInvoke.Checked)) { IsBackground = true }.Start();
         }
+
+        private void btnTestWrite_Click(object sender, EventArgs e)
+        {
+            lbBJResults.Items.Add(DateTime.Now.ToString());
+        }
+
 
     }
 }
